@@ -10,6 +10,7 @@ import Marker from '../marker';
 import './styles.css';
 
 const myRef = React.createRef();
+const API_KEY ='';
 
 const getCenter = (markers, map, maps) => {
   const center = {};
@@ -76,7 +77,7 @@ class GumMap extends Component {
           selectedLocation={selectedLocation}
         />
         <GoogleMapReact
-          bootstrapURLKeys={{ key:'AIzaSyBtKvtQheyFUIKjFUhONX1MjZr7gd0oEAg'}}
+          bootstrapURLKeys={{ key: API_KEY}}
           center={this.selectCenter()}
           defaultZoom={5}
           options={{styles: lightMode ? lightTheme : darkTheme}}
